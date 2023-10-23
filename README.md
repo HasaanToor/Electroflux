@@ -14,4 +14,4 @@ I believe that by creating this game and covering SDG 7 Affordable and Clean Ene
 As for the why/need of the project idea, while there are a few games out there that are similar in terms of power management, those games are more meant for entertainment purposes as they usually consist of fictional simulated cities with extravagant events and circumstances as again they focus on being a lot more fun than focusing on the educational aspect. So I believe my idea will be a good balance of fun and educational content to get the user to think about the future of our energy situation.
 
 ## Vlogs
-* [Vlog 1]()
+* [Vlog 1](https://www.youtube.com/watch?v=Sjh5V35J60k)
