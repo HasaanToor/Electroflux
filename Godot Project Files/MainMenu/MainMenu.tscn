@@ -17,6 +17,18 @@ scale = Vector2(0.34, 0.29)
 texture = ExtResource("2_nv4ns")
 centered = false
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 61.0
+offset_right = 46.0
+offset_bottom = 92.0
+grow_horizontal = 2
+text = "Electroflux"
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
