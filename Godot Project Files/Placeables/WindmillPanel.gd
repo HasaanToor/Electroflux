@@ -1,7 +1,7 @@
 extends Panel
 
 @onready var tower = preload("res://Placeables/Windmill.tscn")
-var currTile
+var validTile
 
 func _on_gui_input(event):
 	var tempTower = tower.instantiate()
@@ -13,27 +13,32 @@ func _on_gui_input(event):
 		
 	elif event is InputEventMouseMotion and event.button_mask == 1: # left click down and mouse is moving (dragging)
 		if get_child_count() > 1: # if the panel child exists (the placement hasn't been cancelled)
-			get_child(1).global_position = event.global_position
-			
+			# get the position of the tile and check if its valid to place the tower on
 			var mapPath = get_tree().get_root().get_node("Level1/TileMap")
 			var tile = mapPath.local_to_map(event.global_position)
-			currTile = mapPath.get_cell_source_id(0, tile, false)
-			print(currTile)
-			if (currTile):
-				get_child(1).get_node("Area").modulate = Color(00006450)
+			var snapTile = mapPath.map_to_local(tile)
+			
+			get_child(1).global_position = snapTile
+			
+			validTile = mapPath.get_cell_source_id(0, tile, false)
+			
+			# change colour of radius depending on validity of tile placement
+			if (validTile == -1):
+				get_child(1).get_node("Area").modulate = Color(1.0, 0.0, 0.0, 0.2)
 			else:
-				get_child(1).get_node("Area").modulate = Color(0, 0, 100, 80)
+				get_child(1).get_node("Area").modulate = Color(0.0, 0.0, 0.5, 0.2)
 			
 	elif event is InputEventMouseButton and event.button_mask == 0 and event.button_index == 1: # left click up
 		if get_child_count() > 1: # if the panel child exists (the placement hasn't been cancelled)
 			var pos = get_child(1).global_position # store position of child and delete it
 			get_child(1).queue_free()
 		
-			# add a new instance of the tower to the main scenes location at the panel child's position
-			var towerPath = get_tree().get_root().get_node("Level1/Towers")
-			towerPath.add_child(tempTower)
-			tempTower.global_position = pos
-			tempTower.get_node("Area").hide()
+			if (validTile != -1):
+				# add a new instance of the tower to the main scenes location at the panel child's position
+				var towerPath = get_tree().get_root().get_node("Level1/Towers")
+				towerPath.add_child(tempTower)
+				tempTower.global_position = pos
+				tempTower.get_node("Area").hide()
 	else: # any other mouse event such as right clicking for example will cancel the placement of the tower by deleting the panel child
 		if get_child_count() > 1:
 			get_child(1).queue_free()
