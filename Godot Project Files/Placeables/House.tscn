@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1mwc8822iq1s"]
+
+[ext_resource type="Texture2D" uid="uid://l8q0gcfwp7sh" path="res://Assets/Buildings/House.png" id="1_etmjr"]
+[ext_resource type="Script" path="res://Placeables/House.gd" id="1_kv5ub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkdey"]
+size = Vector2(32, 32)
+
+[node name="House" type="StaticBody2D"]
+script = ExtResource("1_kv5ub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qkdey")
+
+[node name="House" type="Sprite2D" parent="."]
+texture = ExtResource("1_etmjr")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://lntg0ks1dh01"]
+[gd_scene load_steps=6 format=3 uid="uid://lntg0ks1dh01"]
 
 [ext_resource type="Texture2D" uid="uid://dx4d6kxpyp0sn" path="res://Assets/Buildings/Windmill.png" id="1_ohuw5"]
 [ext_resource type="Script" path="res://Placeables/Windmill.gd" id="1_vuoih"]
@@ -8,6 +8,13 @@ size = Vector2(32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yic5c"]
 radius = 80.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2en5x"]
+bg_color = Color(1, 0.337255, 0.32549, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
 
 [node name="Windmill" type="StaticBody2D"]
 script = ExtResource("1_vuoih")
@@ -25,5 +32,21 @@ shape = SubResource("CircleShape2D_yic5c")
 
 [node name="Node" type="Node" parent="."]
 
+[node name="Area" type="Panel" parent="."]
+modulate = Color(0, 0, 0.392157, 0.313726)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2en5x")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
-[connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]
