@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://lntg0ks1dh01"]
+
+[ext_resource type="Texture2D" uid="uid://dx4d6kxpyp0sn" path="res://Assets/Buildings/Windmill.png" id="1_ohuw5"]
+[ext_resource type="Script" path="res://Placeables/Windmill.gd" id="1_vuoih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wvq8"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yic5c"]
+radius = 80.0
+
+[node name="Windmill" type="StaticBody2D"]
+script = ExtResource("1_vuoih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4wvq8")
+
+[node name="Windmill" type="Sprite2D" parent="."]
+texture = ExtResource("1_ohuw5")
+
+[node name="Tower" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tower"]
+shape = SubResource("CircleShape2D_yic5c")
+
+[node name="Node" type="Node" parent="."]
+
+[connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
+[connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]

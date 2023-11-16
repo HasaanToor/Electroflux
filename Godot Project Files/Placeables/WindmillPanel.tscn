@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfe2h1m5y5qif"]
+
+[ext_resource type="Script" path="res://Placeables/WindmillPanel.gd" id="1_bbnm0"]
+[ext_resource type="Texture2D" uid="uid://dx4d6kxpyp0sn" path="res://Assets/Buildings/Windmill.png" id="2_pdh85"]
+
+[node name="WindmillPanel" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_bbnm0")
+
+[node name="Windmill" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("2_pdh85")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
