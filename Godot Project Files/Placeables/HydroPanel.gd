@@ -1,7 +1,8 @@
 extends Panel
 
-@onready var tower = preload("res://Placeables/Windmill.tscn")
+@onready var tower = preload("res://Placeables/Hydro.tscn")
 var validTile
+var nextToWater
 
 func _on_gui_input(event):
 	var tempTower = tower.instantiate()
@@ -21,6 +22,18 @@ func _on_gui_input(event):
 			get_child(1).global_position = snapTile
 			validTile = mapPath.get_cell_source_id(0, tile, false)
 			
+			# check if any of the surrounding tiles are water tiles (by checking if they are NOT ground tiles)
+			var surroundingTiles = []
+			surroundingTiles.append(tile + Vector2i(1, 0))
+			surroundingTiles.append(tile + Vector2i(-1, 0))
+			surroundingTiles.append(tile + Vector2i(0, 1))
+			surroundingTiles.append(tile + Vector2i(0, -1))
+			
+			for i in surroundingTiles:
+				nextToWater = mapPath.get_cell_source_id(0, i, false)
+				if nextToWater == -1:
+					break;
+			
 			# check if there are any towers already on a space
 			var towerPath = get_tree().get_root().get_node("Level1/Towers")
 			for i in towerPath.get_child_count():
@@ -29,7 +42,7 @@ func _on_gui_input(event):
 					validTile = -1
 			
 			# change colour of radius depending on validity of tile placement
-			if (validTile == -1):
+			if (validTile == -1 or nextToWater != -1):
 				get_child(1).get_node("Area").modulate = Color(1.0, 0.0, 0.0, 0.2)
 			else:
 				get_child(1).get_node("Area").modulate = Color(0.0, 0.0, 0.5, 0.2)

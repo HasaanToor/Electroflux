@@ -1,6 +1,6 @@
 extends Panel
 
-@onready var tower = preload("res://Placeables/Windmill.tscn")
+@onready var tower = preload("res://Placeables/Nuclear.tscn")
 var validTile
 
 func _on_gui_input(event):

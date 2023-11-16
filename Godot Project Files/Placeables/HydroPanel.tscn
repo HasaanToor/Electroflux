@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bel62g7515h3g"]
+
+[ext_resource type="Script" path="res://Placeables/HydroPanel.gd" id="1_rytno"]
+[ext_resource type="Texture2D" uid="uid://djjkyo4r6nceu" path="res://Assets/Buildings/Hydro.png" id="2_fdb50"]
+
+[node name="HydroPanel" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_rytno")
+
+[node name="HydroPanel" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("2_fdb50")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

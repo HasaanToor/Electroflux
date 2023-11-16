@@ -1,29 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://lntg0ks1dh01"]
+[gd_scene load_steps=6 format=3 uid="uid://bb11bntq2n3mq"]
 
-[ext_resource type="Texture2D" uid="uid://dx4d6kxpyp0sn" path="res://Assets/Buildings/Windmill.png" id="1_ohuw5"]
-[ext_resource type="Script" path="res://Placeables/Windmill.gd" id="1_vuoih"]
+[ext_resource type="Script" path="res://Placeables/Hydro.gd" id="1_udxk0"]
+[ext_resource type="Texture2D" uid="uid://djjkyo4r6nceu" path="res://Assets/Buildings/Hydro.png" id="2_srjpf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wvq8"]
 size = Vector2(32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yic5c"]
-radius = 88.0
+radius = 120.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2en5x"]
 bg_color = Color(1, 0.337255, 0.32549, 1)
-corner_radius_top_left = 88
-corner_radius_top_right = 88
-corner_radius_bottom_right = 88
-corner_radius_bottom_left = 88
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
 
-[node name="Windmill" type="StaticBody2D"]
-script = ExtResource("1_vuoih")
+[node name="Hydro" type="StaticBody2D"]
+script = ExtResource("1_udxk0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4wvq8")
 
-[node name="Windmill" type="Sprite2D" parent="."]
-texture = ExtResource("1_ohuw5")
+[node name="Hydro" type="Sprite2D" parent="."]
+texture = ExtResource("2_srjpf")
 
 [node name="Tower" type="Area2D" parent="."]
 
@@ -39,10 +39,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -88.0
-offset_right = 88.0
-offset_bottom = 88.0
+offset_left = -120.0
+offset_top = -120.0
+offset_right = 120.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2en5x")

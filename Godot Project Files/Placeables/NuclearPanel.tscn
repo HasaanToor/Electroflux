@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://fpp60fqr1her"]
+
+[ext_resource type="Script" path="res://Placeables/NuclearPanel.gd" id="1_d7peu"]
+[ext_resource type="Texture2D" uid="uid://7tmh1m6bait3" path="res://Assets/Buildings/Nuclear.png" id="2_ogo1x"]
+
+[node name="NuclearPanel" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_d7peu")
+
+[node name="Nuclear" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("2_ogo1x")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

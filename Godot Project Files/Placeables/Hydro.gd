@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var powerProduced = 50
+var powerProduced = 100
 
 var objectsInRange = []
 
