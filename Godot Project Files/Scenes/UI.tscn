@@ -13,8 +13,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -101.5
-offset_top = -81.0
+offset_top = -98.0
 offset_right = 101.5
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
@@ -50,9 +51,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -90.5
-offset_top = 719.0
+offset_top = 703.0
 offset_right = -41.5
-offset_bottom = 797.0
+offset_bottom = 781.0
 grow_horizontal = 2
 text = "50
 
@@ -64,9 +65,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -28.5
-offset_top = 719.0
+offset_top = 703.0
 offset_right = 20.5
-offset_bottom = 797.0
+offset_bottom = 781.0
 grow_horizontal = 2
 text = "100
 
@@ -78,11 +79,24 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 33.5
-offset_top = 720.0
+offset_top = 704.0
 offset_right = 82.5
-offset_bottom = 798.0
+offset_bottom = 782.0
 grow_horizontal = 2
 text = "150
 
 9 Tiles"
 horizontal_alignment = 1
+
+[node name="PointPanel" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 114.0
+offset_bottom = 36.0
+
+[node name="PointLabel" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 109.0
+offset_bottom = 35.0
+text = "Points: 0"

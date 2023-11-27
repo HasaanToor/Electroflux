@@ -9,9 +9,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if powerRequired < 0:
-		powerRequired = 0
-		
 	get_node("Label").set_text(str(powerRequired))
 
 

@@ -29,7 +29,7 @@ func _on_gui_input(event):
 					validTile = -1
 			
 			# change colour of radius depending on validity of tile placement
-			if (validTile == -1):
+			if (validTile == -1 or tempTower.pointsRequired > Points.points):
 				get_child(1).get_node("Area").modulate = Color(1.0, 0.0, 0.0, 0.2)
 			else:
 				get_child(1).get_node("Area").modulate = Color(0.0, 0.0, 0.5, 0.2)
@@ -39,12 +39,13 @@ func _on_gui_input(event):
 			var pos = get_child(1).global_position # store position of child and delete it
 			get_child(1).queue_free()
 		
-			if (validTile != -1):
+			if (validTile != -1 and tempTower.pointsRequired <= Points.points):
 				# add a new instance of the tower to the main scenes location at the panel child's position
 				var towerPath = get_tree().get_root().get_node("Level1/Towers")
 				towerPath.add_child(tempTower)
 				tempTower.global_position = pos
 				tempTower.get_node("Area").hide()
+				Points.points -= tempTower.pointsRequired
 	else: # any other mouse event such as right clicking for example will cancel the placement of the tower by deleting the panel child
 		if get_child_count() > 1:
 			get_child(1).queue_free()
