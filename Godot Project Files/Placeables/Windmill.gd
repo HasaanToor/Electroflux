@@ -17,9 +17,9 @@ func _on_tower_body_entered(body):
 			if "House" in i.name:
 				tempArray.append(i) # array of just Houses in range
 		
-		for i in tempArray:
-			if i.powerRequired > 0:
-				i.powerRequired -= powerProduced
+		var tempHouse = tempArray.back()
+		if tempHouse.powerRequired > 0:
+			tempHouse.powerRequired -= powerProduced
 		
 		print(objectsInRange)
 		print(tempArray)

@@ -218,7 +218,7 @@ position = Vector2(1104, 560)
 position = Vector2(240, 176)
 
 [node name="House4" parent="Towers" instance=ExtResource("4_js23w")]
-position = Vector2(592, 272)
+position = Vector2(816, 240)
 
 [node name="House5" parent="Towers" instance=ExtResource("4_js23w")]
 position = Vector2(752, 496)
