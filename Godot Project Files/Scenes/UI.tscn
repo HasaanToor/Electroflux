@@ -71,7 +71,7 @@ offset_bottom = 781.0
 grow_horizontal = 2
 text = "⚡100
 
-✨300"
+✨250"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
@@ -85,7 +85,7 @@ offset_bottom = 782.0
 grow_horizontal = 2
 text = "⚡150
 
-✨500"
+✨375"
 horizontal_alignment = 1
 
 [node name="PointPanel" type="Panel" parent="."]

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var pointsRequired = 500
+var pointsRequired = 375
 var powerProduced = 150
 
 var objectsInRange = []
