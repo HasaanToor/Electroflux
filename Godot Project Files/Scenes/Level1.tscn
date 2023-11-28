@@ -209,7 +209,7 @@ metadata/_edit_lock_ = true
 [node name="Towers" type="Node2D" parent="."]
 
 [node name="House" parent="Towers" instance=ExtResource("4_js23w")]
-position = Vector2(880, 304)
+position = Vector2(880, 336)
 
 [node name="House2" parent="Towers" instance=ExtResource("4_js23w")]
 position = Vector2(1104, 560)
@@ -218,7 +218,7 @@ position = Vector2(1104, 560)
 position = Vector2(240, 176)
 
 [node name="House4" parent="Towers" instance=ExtResource("4_js23w")]
-position = Vector2(816, 240)
+position = Vector2(720, 240)
 
 [node name="House5" parent="Towers" instance=ExtResource("4_js23w")]
 position = Vector2(752, 496)

@@ -50,53 +50,67 @@ layout_mode = 2
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -90.5
+offset_left = -108.0
 offset_top = 703.0
-offset_right = -41.5
+offset_right = -38.0
 offset_bottom = 781.0
 grow_horizontal = 2
-text = "50
+text = "⚡50
 
-5 Tiles"
+✨Free"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -28.5
+offset_left = -44.0
 offset_top = 703.0
-offset_right = 20.5
+offset_right = 21.0
 offset_bottom = 781.0
 grow_horizontal = 2
-text = "100
+text = "⚡100
 
-7 Tiles"
+✨300"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 33.5
+offset_left = 18.0
 offset_top = 704.0
-offset_right = 82.5
+offset_right = 83.0
 offset_bottom = 782.0
 grow_horizontal = 2
-text = "150
+text = "⚡150
 
-9 Tiles"
+✨500"
 horizontal_alignment = 1
 
 [node name="PointPanel" type="Panel" parent="."]
 offset_left = 8.0
 offset_top = 6.0
-offset_right = 114.0
-offset_bottom = 36.0
+offset_right = 209.0
+offset_bottom = 102.0
 
-[node name="PointLabel" type="Label" parent="."]
+[node name="PowerRequiredLabel" type="Label" parent="."]
 offset_left = 15.0
 offset_top = 9.0
 offset_right = 109.0
 offset_bottom = 35.0
-text = "Points: 0"
+text = "Power Required:⚡0"
+
+[node name="PowerProducedLabel" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 41.0
+offset_right = 109.0
+offset_bottom = 67.0
+text = "Power Produced:⚡0"
+
+[node name="PointLabel" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 73.0
+offset_right = 109.0
+offset_bottom = 99.0
+text = "Points:✨0"

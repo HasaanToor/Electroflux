@@ -21,10 +21,14 @@ func _on_tower_body_entered(body):
 		var tempHouse = tempArray.back()
 		if tempHouse.powerRequired > 0:
 			tempHouse.powerRequired -= powerProduced
+			Points.powerRequired -= powerProduced
 			Points.points += powerProduced
+			Points.powerProduced += powerProduced
 			if tempHouse.powerRequired < 0:
 				tempHouse.powerRequired += -tempHouse.powerRequired
+				Points.powerRequired += -tempHouse.powerRequired
 				Points.points -= -tempHouse.powerRequired
+				Points.powerProduced -= -tempHouse.powerRequired
 		
 		print(objectsInRange)
 		print(tempArray)
