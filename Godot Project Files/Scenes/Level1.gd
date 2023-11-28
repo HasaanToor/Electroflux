@@ -14,3 +14,5 @@ func _process(_delta):
 	path.get_node("PowerProducedLabel").set_text("Power Produced:⚡" + str(Points.powerProduced))
 	path.get_node("PointLabel").set_text("Points:✨" + str(Points.points))
 	
+	if Points.powerRequired == 0:
+		get_tree().change_scene_to_file("res://Scenes/EndScreen.tscn")

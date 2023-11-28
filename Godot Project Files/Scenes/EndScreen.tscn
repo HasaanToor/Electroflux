@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ie4kpjgbed3"]
+
+[ext_resource type="Script" path="res://Scenes/EndScreen.gd" id="1_035ug"]
+[ext_resource type="Texture2D" uid="uid://dwbmsip5bhvd6" path="res://MainMenu/SplashArt.png" id="2_n8e14"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_035ug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.66)
+texture = ExtResource("2_n8e14")
+centered = false
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.5
+offset_top = -262.0
+offset_right = 45.5
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "To Menu"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.5
+offset_top = -125.0
+offset_right = 264.5
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congratulations! You Win!
+
+Power Usage Reduction Tip: Properly Turn Off Your Devices
+
+Make sure certain devices and appliances are truly turned off
+after use. Plug devices and appliances out of the socket when
+done. If you have multiple devices on the same power strip,
+turn off the power strip at the end of your day!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
