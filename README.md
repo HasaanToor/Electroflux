@@ -10,7 +10,6 @@ There are two ways to play my game, Electroflux, on a website or by downloading 
 
 ### Method 2: Download
 - If you are on a Windows device, you can simply download Electroflux.exe and run it, you may receive a message from your antivirus that this is not a trusted file however there is usually a way around these kinds of warnings.
-- [Download Electroflux](https://github.com/HasaanToor/Electroflux/blob/main/Electroflux.exe "download")
 - <a id="raw-url" href="https://raw.githubusercontent.com/HasaanToor/Electroflux/master/Electroflux.exe">Download Electroflux</a>
 
 ## Project Idea
