@@ -24,13 +24,28 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -45.5
-offset_top = -262.0
-offset_right = 45.5
-offset_bottom = -231.0
+offset_left = -84.0
+offset_top = -227.0
+offset_right = 88.0
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "To Menu"
+
+[node name="Tips" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.5
+offset_top = -266.0
+offset_right = 45.5
+offset_bottom = -235.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Source and More Tips"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -47,6 +62,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,4 +85,55 @@ done. If you have multiple devices on the same power strip,
 turn off the power strip at the end of your day!"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congratulations! You Win!
+
+Power Usage Reduction Tip: Turn Down Your Thermostat
+
+Try to keep your thermostat temperature down as far as you
+are comfortable with then heating your home in the winter.
+The less your furnace has to work to keep the temperature 
+high, the less electricity you use and more power you save!
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congratulations! You Win!
+
+Power Usage Reduction Tip: Be Mindful When Doing Laundry
+
+When doing laundry, try to use cold water whenever possible
+rather than hot water, as it doesnt take as much energy compared
+to heating up water. Try to also air dry your clothes rather than
+using the drying machine, but if you do, ensure it is free of lint!
+"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Tips" to="." method="_on_tips_pressed"]

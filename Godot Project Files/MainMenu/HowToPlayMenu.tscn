@@ -17,29 +17,57 @@ scale = Vector2(0.7, 0.658)
 texture = ExtResource("2_yhg1h")
 centered = false
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.5
-offset_top = -33.0
-offset_right = 116.5
-offset_bottom = 33.0
+offset_left = -264.5
+offset_top = -125.0
+offset_right = 264.5
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -104.0
+offset_right = 237.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Houses all over an island have found themselves out of power!
+You must power these houses by placing sustainable energy
+sources in strategic locations.
 
-[node name="Placeholder" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Placeholder how to play here"
+Each building you place has a radius of effect, amount of power
+restored and a point cost, you get points by powering houses.
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+Certain buildings may have special requirements, like the hydro
+plant that needs to be placed next to water."
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -266.0
+offset_right = 49.0
+offset_bottom = -235.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Back"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

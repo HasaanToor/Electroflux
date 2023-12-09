@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://x2flfm0mwjfh"]
+[gd_scene load_steps=4 format=3 uid="uid://x2flfm0mwjfh"]
 
 [ext_resource type="Script" path="res://MainMenu/MainMenu.gd" id="1_6sr1y"]
 [ext_resource type="Texture2D" uid="uid://dwbmsip5bhvd6" path="res://MainMenu/SplashArt.png" id="2_nv4ns"]
+[ext_resource type="Texture2D" uid="uid://njal213kllof" path="res://Assets/Buildings/Logo.jpg" id="3_yy1qc"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -57,6 +58,11 @@ text = "How To Play"
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exit"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(640, 217)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_yy1qc")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var pointsRequired = 375
+var pointsRequired = 300
 var powerProduced = 150
 
 var objectsInRange = []
@@ -18,17 +18,17 @@ func _on_tower_body_entered(body):
 			if "House" in i.name:
 				tempArray.append(i) # array of just Houses in range
 		
-		var tempHouse = tempArray.back()
-		if tempHouse.powerRequired > 0:
+		var tempHouse = tempArray.back() # get the most recent house
+		if tempHouse.powerRequired > 0: # if house still needs power, adjust values accordingly
 			tempHouse.powerRequired -= powerProduced
 			Points.powerRequired -= powerProduced
 			Points.points += powerProduced
 			Points.powerProduced += powerProduced
-			if tempHouse.powerRequired < 0:
-				tempHouse.powerRequired += -tempHouse.powerRequired
+			if tempHouse.powerRequired < 0: # if house has "negative" power requirement, adjust values to be normalized to 0
 				Points.powerRequired += -tempHouse.powerRequired
 				Points.points -= -tempHouse.powerRequired
 				Points.powerProduced -= -tempHouse.powerRequired
+				tempHouse.powerRequired += -tempHouse.powerRequired
 		
 		print(objectsInRange)
 		print(tempArray)
