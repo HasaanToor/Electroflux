@@ -10,7 +10,7 @@ There are two ways to play my game, Electroflux, on a website or by downloading 
 
 ### Method 2: Download
 - If you are on a Windows device, you can simply download Electroflux.exe and run it, you may receive a message from your antivirus that this is not a trusted file however there is usually a way around these kinds of warnings.
-- [Download Electroflux](https://github.com/HasaanToor/Electroflux/blob/main/Electroflux.exe)
+- [Download Electroflux](https://github.com/HasaanToor/Electroflux/blob/main/Electroflux.exe "download")
 
 ## Project Idea
 My plan is to make a game, there will be a grid like map on which houses/building tiles will spawn in periodically and your goal is to strategically place power production buildings (such as windmills or hydropower plants that have to be next to water tiles for example) to accommodate the power requirements of the houses, the game will end if you fail to power the houses for a predetermined amount of time.
